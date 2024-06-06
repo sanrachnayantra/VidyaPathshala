@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin-right:5px;
+    padding:0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    background:linear-gradient(#d5A3FF 0%, #77A5F8 100%);
+}
+.backBtn {
+    font-size: 20px;
+    margin-right: 20px;
+}
+.members img,
+.members1 img {
+    width: 250px;
+    height: 250px;
+}
+.wrapper{
+    background: #fff;
+    width: 1000px;
+    margin-right: 1%;
+    border-radius:15px;
+    padding:20px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+.wrapper1{
+    background: #fff;
+    width: 550px;
+    border-radius:15px;
+    padding:20px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+h1 {
+    margin-top: 0;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 35px;
+    font-weight: 1000;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+hr{
+    width:100px;
+    margin:10px auto;
+}
+.members{
+    display: flex;
+}
+.team-mem{
+    margin:8px;
+}
+.members1{
+    display: flex;
+}
+.team-mem1,
+.team-mem2,
+.team-mem3,
+.team-mem4,
+.team-mem5,
+.team-mem6 {
+    margin:8px;
+}
+img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    margin:10px;
+}
+.team-mem1 {
+    margin-left: 60px;
+}
+.team-mem1 img {
+    margin-left: 40px;
+}
+.team-mem2 {
+    margin-left: 100px;
+}
+.team-mem2 img {
+    margin-left: 50px;
+}
+.team-mem3{
+    margin-left: 10%; 
+}  
+.team-mem4 {
+    margin-left: 20%;
+}
+.team-mem5 img {
+    margin-left: 20%;
+}
+.team-mem6 img {
+    margin-left: 20%;
+}
+.team-mem6 {
+    margin-left: 10%;
+}
+h4,p{
+    text-align: center;
+    font-size:25px;
+    margin:7px;
+}
+.wrapper hr {
+    position: relative;
+    top: 20px;
+    border: none;
+    height: 2px;
+    background: black;
+    margin-bottom: 50px;
+    opacity: 60%;
+}

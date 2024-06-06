@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background: url('https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg?t=st=1713684764~exp=1713688364~hmac=4f3aaa2dfd23125530825b5503d86fa4ed61f6b8a04309999ff4a7abdf64f7b9&w=1060');
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutbca {
+    color: #fff;
+    height: 50px;
+    width: 500px;
+    display: contents;
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    background: transparent;
+    backdrop-filter: blur(40px);
+    background-color: rgba(50, 41, 41, 0.2);
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    padding: 6px 14px;
+}
+
+.select-Semester {
+    display: contents;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px 0px;
+    color: white;
+}
+
+.col {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 5px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.3s;
+}
+
+.col button {
+    width: 200px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 12px 0;
+    background: #000;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}
+
+.card1 {
+    background: url('https://img.freepik.com/free-photo/stationery-arrangement-yellow-background_23-2148279752.jpg?t=st=1713684987~exp=1713688587~hmac=09e03c3da4c42409685561f15ab4c36af2cfd11749282bb9656c184bae5399c8&w=740');
+    margin: 10px 10px;
+    
+}
+
+.card2 {
+    background: url('https://img.freepik.com/free-photo/stationery-arrangement-yellow-background_23-2148279752.jpg?t=st=1713684987~exp=1713688587~hmac=09e03c3da4c42409685561f15ab4c36af2cfd11749282bb9656c184bae5399c8&w=740');
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+hr {
+    color: #000;
+    background-color: #000;
+    height: 5px;
+}
+
+h1{
+    margin-top: 30px;
+}
+
+h5 {
+    margin-top: 50px;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 0 0 5px black;
+    text-align: center;
+    align-items: center;
+}
+
+.card1 a,
+.card2 a {
+    font-size: 30px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+a{
+    color: black;
+}
+
+object {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 600px;
+    width: 60%;
+    padding: 20px 100px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    margin-left: 500px;
+    margin-top: 20px;
+}
+
+.col .card1 .chapternames {
+    position: relative;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px) {
+    .about_bca {
+        display: block;
+    }
+
+    .select-Semester {
+        display: block;
+    }
+
+    .col {
+        height: 50px;
+        display: block;
+    }
+
+    .card{
+        font-size: 1rem;
+        width: 350px;
+        height: 450px;
+    }
+}
+
+@media(max-width: 576px) {
+    .about_bca {
+        display: block;
+    }
+
+    .select-Semester {
+        display: block;
+    }
+
+    .col {
+        height: 50px;
+        display: block;
+    }
+
+    .card{
+        font-size: 1rem;
+        width: 350px;
+        height: 450px;
+    }
+}

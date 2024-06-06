@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #fff;
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px #09001d);
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background: url(./large-collection-old-books-wooden-bookshelf-generated-by-artificial-intelligence.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    pointer-events: auto;
+    transition: .3s ease;
+}
+
+.main.active {
+    filter: blur(15px);
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home.active {
+    display: none;
+    width: 0;
+}
+
+.home-content h1 {
+    font-size: 78px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.home-content p {
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    margin-bottom: 30px;
+}
+
+.home-content .start-btn,
+.home-content .downloadmoremcq {
+    width: 190px;
+    height: 55px;
+    margin-top: 10px;
+    background: #c40094;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #c40094;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.home-content .start-btn:hover,
+.home-content .downloadmoremcq:hover {
+    background: #09001d;
+    box-shadow: none;
+}
+
+.popup-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+.popup-info.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-info h2 {
+    align-content: center;
+    font-size: 50px;
+    color: #c40094;
+}
+
+.popup-info .info {
+    display: inline-block;
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    margin: 4px 0;
+}
+
+.popup-info .btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #999;
+    margin-top: 10px;
+    padding: 15px 0 7px;
+}
+
+.popup-info .btn-group .info-btn-exit {
+    width: 130px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    color: #fff;
+    background: #c40094;
+    font-size: 18px;
+    font-weight: 600;
+    border: 3px solid #c40094;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.popup-info .btn-group .info-btn-continue {
+    width: 130px;
+    height: 50px;
+    margin-left: 145px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    background: #c40094;
+    font-size: 18px;
+    font-weight: 600;
+    border: 3px solid #c40094;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.popup-info .btn-group .info-btn-exit:hover {
+    background: transparent;
+    color: #c40094;
+}
+
+.popup-info .btn-group .info-btn-continue:hover {
+    background: transparent;
+    color: #c40094;
+}
+
+.quiz-section {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: none;
+    transition: .5s ease-in-out;
+    transition-delay: .25s;
+    z-index: 100;
+}
+
+.quiz-section.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-section .quiz-box {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    border: 2px solid #c40094;
+    border-radius: 10px;
+    box-shadow: none;
+    flex-direction: column;
+    padding: 25px 25px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+
+.quiz-section .quiz-box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+
+.quiz-box h1 {
+    font-size: 30px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, #c40094, transparent);
+    border-radius: 5px;
+}
+
+.quiz-box .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #c40094;
+}
+
+.quiz-header span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.quiz-header .quiz-score {
+    background: #c40094;
+    border-radius: 5px;
+    padding: 8px 5px;
+}
+
+.quiz-box .question-text {
+    margin: 10px 5px;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.option-list .option {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.option-list .option:hover {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.option-list .option.correct {
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+
+.option-list .option.incorrect {
+    background: #09001d;
+    color: #a60045;
+    border-color: #a60045;
+}
+
+.option-list .option.disabled {
+    pointer-events: none;
+}
+
+.quiz-box .quiz-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0;
+    border-top: 2px solid #c40094;
+}
+
+.total-questions {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.quiz-footer .next-Btn {
+    background: #333;
+    color: black;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .2s ease-in-out;
+}
+
+.quiz-footer .next-Btn.active {
+    pointer-events: auto;
+    background: #c40094;
+    border-color: #c40094;
+    color: #fff;
+}
+
+.quiz-footer .next-Btn.active:hover {
+    background: #fff;
+    color: #c40094;
+}
+
+.quiz-section .result-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 100%;
+    background: transparent;
+    border: 2px solid #c40094;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+.quiz-section .result-box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.result-box h2 {
+    font-size: 52px;
+}
+
+.result-box .percentage-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+
+.percentage-container .circular-progress {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(#c40094 3.6deg, rgba(255, 255, 255, .1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percentage-container .circular-progress::before {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: #09001d;
+    border-radius: 50%;
+}
+
+.circular-progress .progress-value {
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.percentage-container .score-text {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.result-box .buttons {
+    display: flex;
+}
+
+.buttons button {
+    width: 130px;
+    height: 47px;
+    background: #c40094;
+    border: 2px solid #c40094;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 20px 20px;
+    cursor: pointer;
+}
+
+.buttons button:nth-child(1):hover {
+    background: #950170;
+    border-color: #950170;
+}
+
+.buttons button:nth-child(2),
+.buttons button:nth-child(3) {
+    background: transparent;
+    color: #c40094;
+}
+
+.buttons button:nth-child(2):hover {
+    background: #c40094;
+    color: #fff;
+}
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px) {
+    .main{
+        display: flex;
+        width: auto;
+        height: auto;
+    }
+
+    .quiz-box h2 {
+        font-size: 15px;
+    }
+
+    .popup-info{
+        display: block;
+        height: auto;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+    }
+
+    .quiz-box h2 {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 576px) {
+    .main{
+        display: flex;
+        width: auto;
+        height: auto;
+    }
+
+    .quiz-box h2 {
+        font-size: 15px;
+    }
+
+    .container{
+        display: flex;
+        overflow: hidden;
+    }
+
+    .popup-info{
+        display: block;
+        height: auto;
+        width: auto;
+    }
+
+    .quiz-section{
+        margin-top: -50px;
+    }
+}

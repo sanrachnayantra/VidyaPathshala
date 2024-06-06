@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-2430.jpg?t=st=1713692300~exp=1713695900~hmac=a2050c6d6c13ab4bd61b90efd392a1c2ef827aecc70f1a295ac7de8e9749c588&w=1060');
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutbca{
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 110px;
+    font-size: 1.2rem;
+    background: transparent;
+    text-align: center;
+}
+.col{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.col button{
+    width: 100px;
+    color: fff;
+    font: 15;
+    padding: 12px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 60px;
+    align-items: center;
+}
+.card2,
+.card4,
+.card6{
+    background: url('https://img.freepik.com/free-vector/gradient-technology-futuristic-background_23-2149155718.jpg?t=st=1713691883~exp=1713695483~hmac=9573b711fe5ba9a67eeed0cf238f95734182324f2ee6f0fc5b56b0598158f740&w=1060');
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 5px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.3s;
+}
+
+a{
+    color: #fff;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+h5{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #999;
+    margin-bottom: 20px;
+}
+
+hr{
+    height: 5px;
+    color: #000;
+}
+
+object{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 600px;
+    width: 60%;
+    padding: 20px 100px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    margin-left: 500px;
+    margin-top: 20px;
+}
+
+.col .card1 .chapternames{
+    position: relative;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px) {
+    .about_bca {
+        display: block;
+    }
+
+    .col {
+        height: 50px;
+        display: block;
+    }
+
+    .card{
+        font-size: 1rem;
+        width: 350px;
+        height: 450px;
+    }
+}
+
+@media(max-width: 576px) {
+    .about_bca {
+        display: block;
+    }
+
+    .col {
+        height: 50px;
+        display: block;
+    }
+
+    .card{
+        font-size: 1rem;
+        width: 350px;
+        height: 450px;
+    }
+}
